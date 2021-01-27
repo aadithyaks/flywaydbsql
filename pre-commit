@@ -1,0 +1,10 @@
+#!/bin/sh
+if flyway validate -url=jdbc:h2:./foobardb \
+	-locations=filesystem:C:\Users\683132\OneDrive - Cognizant\FlywayDB\Download\flyway-commandline-7.5.1-windows-x64\flyway-7.5.1\sql\
+	-ignorePendingMigrations=true; then
+	echo Flyway validation successful
+	exit 0
+else
+	echo Flyway validation failed. please check.
+	exit 1
+fi
